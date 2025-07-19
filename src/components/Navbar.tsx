@@ -5,7 +5,7 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container">
-        <Link className="navbar-brand" to="/">Test</Link>
+        <Link className="navbar-brand" to="/">Samuel Forquer</Link>
         <button
           className="navbar-toggler"
           type="button"
