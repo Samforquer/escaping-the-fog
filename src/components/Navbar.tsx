@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Navbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container">
-        <a className="navbar-brand" href="#hero">Test</a>
+        <Link className="navbar-brand" to="/">Test</Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,19 +20,19 @@ export const Navbar: React.FC = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#">Home</a>
+              <Link className="nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#gallery">Gallery</a>
+              <Link className="nav-link" to="/gallery">Gallery</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#shop">Shop</a>
+              <Link className="nav-link" to="/shop">Shop</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#about">About</a>
+              <Link className="nav-link" to="/about">About</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact">Contact</a>
+              <Link className="nav-link" to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

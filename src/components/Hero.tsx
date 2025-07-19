@@ -19,9 +19,9 @@ export const Hero: React.FC = () => {
       />
 
       <div className="position-relative px-4" style={{ maxWidth: '2000px' }}>
-        <h1 className="display-2 fw-bold mb-4">Escape the Fog</h1>
+        <h1 className="display-2 fw-bold mb-4">Escaping the Fog</h1>
         <p className="lead mb-5 fs-4">
-          Where stillness speaks louder than noise. Explore moments of clarity, emotion, and art.
+          Some text intro here
         </p>
         <a href="#shop" className="btn btn-primary btn-lg me-3 shadow-sm">
           Shop Prints
