@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
+import { GalleryImage } from './GalleryImage' // import your new component
 import oldMansCave from '../assets/gallery/old-mans-cave.jpg'
 import woodDucks from '../assets/gallery/wood-ducks.jpg'
 import layFlatLeaves from '../assets/gallery/lay-flat-leaves.jpg'
@@ -24,17 +25,23 @@ const images = [
 export const Gallery = () => {
   const [index, setIndex] = useState(-1)
 
+  // Preload images on mount
+  useEffect(() => {
+    images.forEach(({ src }) => {
+      const img = new Image()
+      img.src = src
+    })
+  }, [])
+
   return (
-    <section id="gallery" className="container py-5">
+    <section id="gallery" className="container-fluid py-5">
       <h2 className="mb-4">Gallery</h2>
       <div className="row g-3">
         {images.map((image, i) => (
           <div key={i} className="col-6 col-md-4 col-lg-3">
-            <img
+            <GalleryImage
               src={image.src}
               alt={`Image ${i + 1}`}
-              className="img-fluid rounded shadow-sm"
-              style={{ cursor: 'pointer' }}
               onClick={() => setIndex(i)}
             />
           </div>
@@ -47,7 +54,6 @@ export const Gallery = () => {
           open={index >= 0}
           index={index}
           close={() => setIndex(-1)}
-          // You can add more props like plugins, animation, etc.
         />
       )}
     </section>
