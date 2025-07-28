@@ -15,7 +15,7 @@ export const GalleryImage: React.FC<GalleryImageProps> = ({ src, alt, onClick })
       alt={alt}
       onLoad={() => setLoaded(true)}
       onClick={onClick}
-      className="img-fluid rounded shadow-sm"
+      className="img-fluid shadow-sm"
       style={{
         cursor: 'pointer',
         opacity: loaded ? 1 : 0,
