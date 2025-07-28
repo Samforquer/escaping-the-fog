@@ -1,31 +1,26 @@
 import { useState, useEffect } from 'react'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
-import { GalleryImage } from './GalleryImage' // import your new component
-import oldMansCave from '../assets/gallery/old-mans-cave.jpg'
-import woodDucks from '../assets/gallery/wood-ducks.jpg'
-import layFlatLeaves from '../assets/gallery/lay-flat-leaves.jpg'
-import frog from '../assets/gallery/frog.jpg'
-import hummingbird from '../assets/gallery/hummingbird.jpg'
-import mushroom from '../assets/gallery/mushroom.jpg'
-import standingAlone from '../assets/gallery/standing-alone.jpg'
-import deer from '../assets/gallery/deer.jpg'
+import { GalleryImage } from './GalleryImage'
+
+// S3 URLs
+const baseUrl = 'https://samuel-forquer-photography.s3.us-east-1.amazonaws.com'
 
 const images = [
-  { src: woodDucks },
-  { src: hummingbird },
-  { src: mushroom },
-  { src: frog },
-  { src: standingAlone },
-  { src: layFlatLeaves },
-  { src: deer },
-  { src: oldMansCave },
+  { src: `${baseUrl}/woodducks.jpg` },
+  { src: `${baseUrl}/hummingbird.jpg` },
+  { src: `${baseUrl}/mushroom.jpg` },
+  { src: `${baseUrl}/frog.jpg` },
+  { src: `${baseUrl}/foggytree.jpg` },
+  { src: `${baseUrl}/layflatleaves.jpg` },
+  { src: `${baseUrl}/deer.jpg` },
+  { src: `${baseUrl}/oldmanscave.jpg` },
 ]
 
 export const Gallery = () => {
   const [index, setIndex] = useState(-1)
 
-  // Preload images on mount
+  // Optional preload
   useEffect(() => {
     images.forEach(({ src }) => {
       const img = new Image()
