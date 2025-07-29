@@ -1,9 +1,15 @@
 package com.samforquer.backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "photos")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Photo {
 
     @Id
@@ -11,48 +17,7 @@ public class Photo {
     private Long id;
 
     private String title;
-
     private String url;
-
+    private String category;
     private String description;
-
-    // Constructors
-    public Photo() {
-    }
-
-    public Photo(String title, String url, String description) {
-        this.title = title;
-        this.url = url;
-        this.description = description;
-    }
-
-    // Getters and setters
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
-
