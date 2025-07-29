@@ -27,4 +27,10 @@ public class PhotoController {
     public Photo addPhoto(@RequestBody Photo photo) {
         return photoService.addPhoto(photo);
     }
+
+    @DeleteMapping("/{id}")
+    public void deletePhoto(@PathVariable Long id) {
+    photoService.deletePhoto(id);
+    }
+
 }

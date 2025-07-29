@@ -24,4 +24,9 @@ public class PhotoService {
     public Photo addPhoto(Photo photo) {
         return photoRepository.save(photo);
     }
+
+    public void deletePhoto(Long id) {
+    photoRepository.deleteById(id);
+    }
+
 }
