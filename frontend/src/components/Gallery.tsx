@@ -15,6 +15,7 @@ const images = [
   { src: `${baseUrl}/layflatleaves.jpg` },
   { src: `${baseUrl}/deer.jpg` },
   { src: `${baseUrl}/oldmanscave.jpg` },
+  { src: `${baseUrl}/altoldmancave.jpg`}
 ]
 
 export const Gallery = () => {

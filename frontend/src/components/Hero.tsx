@@ -1,5 +1,7 @@
 import React from 'react'
 import layFlatLeaves from '../assets/gallery/lay-flat-leaves.jpg'
+import { Link } from 'react-router-dom'
+
 
 export const Hero: React.FC = () => {
   return (
@@ -25,12 +27,12 @@ export const Hero: React.FC = () => {
       <div className="position-relative z-2 px-4">
         <h1 className="display-2 fw-bold mb-4">Samuel Forquer Photography</h1>
         <p className="lead mb-5 fs-4">Come check out my photos!</p>
-        <a href="#shop" className="btn btn-primary btn-lg me-3 shadow-sm">
+        <Link to="/shop" className="btn btn-primary btn-lg me-3 shadow-sm">
           Shop Prints
-        </a>
-        <a href="#gallery" className="btn btn-outline-light btn-lg shadow-sm">
+        </Link>
+        <Link to="/gallery" className="btn btn-outline-light btn-lg shadow-sm">
           View Gallery
-        </a>
+        </Link>
       </div>
     </section>
   )
